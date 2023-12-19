@@ -1,0 +1,63 @@
+\documentclass[12pt,a4paper]{ctexart}
+
+\usepackage[top=1.5in, bottom=1in, left=1in, right=1in]{geometry}
+\pagestyle{plain}
+\linespread{1.5}
+
+%Librerie utili
+\usepackage{libertine}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{float,booktabs}
+
+\usepackage{scrlayer}
+\DeclareNewLayer[
+    foreground,
+    %textarea,% use only the textarea
+    contents={%
+      \parbox[b][\layerheight][c]{\layerwidth}
+        {\centering This page has been intentionally left blank.}%
+    }
+  ]{blankpage.fg}
+\DeclarePageStyleByLayers{blank}{blankpage.fg}
+
+\begin{document}
+\title{title}
+\author{author}
+\date{date}
+
+\begin{titlepage}
+  \begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+      \centering
+      \includegraphics[height=5cm]{CCNU.jpg}
+    \end{minipage}
+  \end{figure}
+  \begin{center}
+    \textsc{\Large{2023华中师范大学 菜鸟杯 新生程序设计竞赛\\}}
+    \vspace{5mm}
+    \fontsize{10mm}{7mm}\selectfont
+    \textbf{\Large{请不要在开赛前翻阅题册}}
+    
+
+  \end{center}
+
+  \vspace{5mm}
+
+  \begin{center}
+    \input{cover.toc.tex}
+  \end{center}
+
+  \begin{figure*}[b]
+    \centering{
+      {\large{华中师范大学\\  2023/12/17 10:00 - 15:00}}\\
+    }
+  \end{figure*}
+
+\end{titlepage}
+
+\newpage\null\thispagestyle{blank}\newpage
+
+\end{document}

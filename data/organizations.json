@@ -1,0 +1,104 @@
+[
+    {
+        "id": "CCNU",
+        "name": "CCNU",
+        "formal_name": "\u534e\u4e2d\u5e08\u8303\u5927\u5b66",
+        "country": "CHN"
+    },
+    {
+        "id": "WHU",
+        "name": "WHU",
+        "formal_name": "\u6b66\u6c49\u5927\u5b66",
+        "country": "CHN"
+    },
+    {
+        "id": "HUST",
+        "name": "HUST",
+        "formal_name": "\u534e\u4e2d\u79d1\u6280\u5927\u5b66",
+        "country": "CHN"
+    },
+    {
+        "id": "WHUT",
+        "name": "WHUT",
+        "formal_name": "\u6b66\u6c49\u7406\u5de5\u5927\u5b66",
+        "country": "CHN"
+    },
+    {
+        "id": "HUT",
+        "name": "HUT",
+        "formal_name": "\u6e56\u5317\u5de5\u4e1a\u5927\u5b66",
+        "country": "CHN"
+    },
+    {
+        "id": "HZAU",
+        "name": "HZAU",
+        "formal_name": "\u534e\u4e2d\u519c\u4e1a\u5927\u5b66",
+        "country": "CHN"
+    },
+    {
+        "id": "WIT",
+        "name": "WIT",
+        "formal_name": "\u6b66\u6c49\u5de5\u7a0b\u5927\u5b66",
+        "country": "CHN"
+    },
+    {
+        "id": "HBUAS",
+        "name": "HBUAS",
+        "formal_name": "\u6e56\u5317\u6587\u7406\u5b66\u9662",
+        "country": "CHN"
+    },
+    {
+        "id": "HBTCM",
+        "name": "HBTCM",
+        "formal_name": "\u6e56\u5317\u4e2d\u533b\u836f\u5927\u5b66",
+        "country": "CHN"
+    },
+    {
+        "id": "WUT",
+        "name": "WUT",
+        "formal_name": "\u6b66\u660c\u7406\u5de5\u5b66\u9662",
+        "country": "CHN"
+    },
+    {
+        "id": "WUST",
+        "name": "WUST",
+        "formal_name": "\u6b66\u6c49\u79d1\u6280\u5927\u5b66",
+        "country": "CHN"
+    },
+    {
+        "id": "WBU",
+        "name": "WBU",
+        "formal_name": "\u6b66\u6c49\u5546\u5b66\u9662",
+        "country": "CHN"
+    },
+    {
+        "id": "WHSU",
+        "name": "WHSU",
+        "formal_name": "\u6b66\u6c49\u4f53\u80b2\u5b66\u9662",
+        "country": "CHN"
+    },
+    {
+        "id": "YZU",
+        "name": "YZU",
+        "formal_name": "\u957f\u6c5f\u5927\u5b66",
+        "country": "CHN"
+    },
+    {
+        "id": "CUG",
+        "name": "CUG",
+        "formal_name": "\u4e2d\u56fd\u5730\u8d28\u5927\u5b66",
+        "country": "CHN"
+    },
+    {
+        "id": "SCUEC",
+        "name": "SCUEC",
+        "formal_name": "\u4e2d\u5357\u6c11\u65cf\u5927\u5b66",
+        "country": "CHN"
+    },
+    {
+        "id": "WTU",
+        "name": "WTU",
+        "formal_name": "\u6b66\u6c49\u7eba\u7ec7\u5927\u5b66",
+        "country": "CHN"
+    }
+]
