@@ -1,25 +1,10 @@
 # Author: @a48zhang
-# 2023/12/19
+# 2025/03/21
 
-import argparse
 import csv
-import json
+import sys
 
-parser = argparse.ArgumentParser(
-    prog="team_gen.py",
-    description="""Generate teams information for DomJudge.
-    CSV format: teamname, school, grade, schoolID(won't use), ID.
-    """,
-    epilog="If you are facing encoding problems, use the WSL.",
-)
 
-parser.add_argument("filename", metavar="input filename", type=str, help="the csv file")
-
-parser.add_argument("output", metavar="output filename", type=str, help="the json file")
-
-args = parser.parse_args()
-filename = args.filename
-output = args.output
 
 schools = {
     "华中师范大学": "CCNU",
@@ -37,38 +22,51 @@ schools = {
     "武汉体育学院": "WHSU",
     "长江大学": "YZU",
     "中国地质大学（武汉）": "CUG",
+    "中国地质大学": "CUG", # 666
     "中南民族大学": "SCUEC",
     "武汉纺织大学": "WTU",
+    "湖北大学": "HBU",
+    "湖北第二师范学院": "HUE",
+    "湖北经济学院": "HBUE",
+    "湖北商贸学院": "HBC",
+    "黄冈师范学院": "HGNU",
+    "武汉学院": "WHXY",
 }
 
-# position definition
-pos = {"name": 0, "organization_id": 1, "group_ids": 2, "id": 4}
+def main():
+    if len(sys.argv) != 3:
+        print("Usage: python csv2tsv.py input.csv output.tsv")
+        return
+    
+    in_file = sys.argv[1]
+    out_file = sys.argv[2]
 
+    with open(in_file, 'r', encoding='utf-8') as infile, \
+         open(out_file, 'w', encoding='utf-8', newline='') as outfile:
+        
+        reader = csv.reader(infile, delimiter='\t')
+        writer = csv.writer(outfile, delimiter='\t')
+        
+        # 写入文件头
+        writer.writerow(['File_Version', '2'])
+        
+        for row in reader:
+            team_id, category_id, team_name, institution = row
+            short_name = schools[institution]
+            
+            # 构造输出行（注意空字段的位置）
+            output_row = [
+                team_id,        # Team ID
+                '',             # External ID（空）
+                category_id,    # Category ID
+                team_name,      # Team Name
+                institution,    # Institution Name
+                short_name,     # Institution Short Name
+                'CHN',          # Country Code
+                ''              # External Institution ID（空）
+            ]
+            
+            writer.writerow(output_row)
 
-def deal_with_csv(filename):
-    csv_reader = csv.reader(open(filename, encoding="utf8"))
-    data = []
-    for row in csv_reader:
-        now = {}
-        now.update({"name": row[pos["name"]]})
-        if row[pos["group_ids"]] in schools:
-            now.update({"organization_id": schools[row[pos["organization_id"]]]})
-        else:
-            now.update({"organization_id": "others"})
-
-        # modify every year
-        if row[pos["group_ids"]] == "2023" or row[pos["group_ids"]] == "2023级":
-            now.update({"group_ids": ["participants"]})
-        else:
-            now.update({"group_ids": ["observers"]})
-
-        now.update({"id": row[pos["id"]]})
-        now["id"] = now["id"].replace("x", "X")
-        now["id"] = now["id"].replace(" ", "")
-        now["id"] = now["id"].replace("\t", "")
-
-        data.append(now)
-    return json.dumps(data, ensure_ascii=False).encode("unicode_escape").decode("utf-8")
-
-
-open(output, "w").write(deal_with_csv(filename))
+if __name__ == '__main__':
+    main()

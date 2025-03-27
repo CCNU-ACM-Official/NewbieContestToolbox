@@ -100,5 +100,42 @@
         "name": "WTU",
         "formal_name": "\u6b66\u6c49\u7eba\u7ec7\u5927\u5b66",
         "country": "CHN"
+    },
+    {
+        "id": "HBU",
+        "name": "HBU",
+        "formal_name": "湖北大学",
+        "country": "CHN"
+    }
+    ,
+    {
+        "id": "HUE",
+        "name": "HUE",
+        "formal_name": "湖北第二师范学院",
+        "country": "CHN"
+    },
+    {
+        "id": "HBUE",
+        "name": "HBUE",
+        "formal_name": "湖北经济学院",
+        "country": "CHN"
+    },
+    {
+        "id": "HBC",
+        "name": "HBC",
+        "formal_name": "湖北商贸学院",
+        "country": "CHN"
+    },
+    {
+        "id": "HGNU",
+        "name": "HGNU",
+        "formal_name": "黄冈师范学院",
+        "country": "CHN"
+    },
+    {
+        "id": "WHXY",
+        "name": "WHXY",
+        "formal_name": "武汉学院",
+        "country": "CHN"
     }
 ]
