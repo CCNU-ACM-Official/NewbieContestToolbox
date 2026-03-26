@@ -51,12 +51,12 @@ def main():
     current_id = 2
 
     seats = []
-    for i in range(1, 30):
+    for i in range(1, 65):
         seats.append(f"CCNU-A{i:02d}")
+    for i in range(1, 65):
         seats.append(f"CCNU-B{i:02d}")
+    for i in range(1, 31):
         seats.append(f"CCNU-C{i:02d}")
-    for i in range(31, 72):
-        seats.append(f"CCNU-A{i:02d}")
     random.shuffle(seats)
 
 
